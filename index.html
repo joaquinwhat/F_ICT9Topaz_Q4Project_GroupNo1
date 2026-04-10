@@ -45,8 +45,14 @@
         }
 
         function checkLogin() {
-            alert("");
-        }
+            var useripnutt = document.getElementById("user");
+            var username = userinputt.value;
+            
+            if (username.trim() !== "") {
+                alert("Welcome " + username + " to our very own website.");
+            } else {
+                alert("Please enter a username.");
+            }
     </script>
     
 </body>
