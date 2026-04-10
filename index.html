@@ -6,6 +6,48 @@
     <title>The Better OBMC</title>
 </head>
 <body>
+
+    <div class="RedApps">
+        <div id="form-box">
+
+            <h4 class="title mb-3">Login to Account</h4>
+            <button class="btn btn-light w-100 mb-2" data-bs-toggle="collapse" data-bs-target="#instructions">Show Instructions</button>
+
+            <div class="collapse mb-3" id="instructions">
+                <div class="card card-body">
+                    <p>Please enter your username and password to log in.</p>
+                </div>
+            </div>
+
+            <input type ="text" class="form-control mb-2" placeholder="Username">
+            <input type ="password" class="form-control mb-2" placeholder="Password">
+            <div class="form-check text-start">
+                <input class="form-check-input" type="checkbox" id="checkboxID" onclick="showMessage()">
+                <label class="form-check-label">Remember me</label>
+            </div>
+
+            <p id="message"></p>
+            <button class="btn btn-info w-100 mt-2" onclick="checkLogin()">Login</button>
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            var checkbox = document.getElementById("checkboxID");
+            var message = document.getElementById("message");
+
+            if (checkbox.checked) {
+                message.textContent = "You will be remembered.";
+            } else {
+                message.textContent = "You will not be remembered.";
+            }
+        }
+
+        function checkLogin() {
+            alert("Login functionality is not implemented yet.");
+        }
+    </script>
     
 </body>
 </html>
