@@ -48,9 +48,12 @@
         function checkLogin() {
             var usernameinput = document.getElementById("user");
             var username = usernameinput.value;
-            
+
             if (username.trim() !== "") {
-                alert("Welcome " + username + ", to our very own website.");
+            localStorage.setItem("studentName", username);
+
+            alert("Welcome " + username + ", to our very own website.");
+            window.location.href = "dashboard.html";
             } else {
                 alert("Please enter a username.");
             }
