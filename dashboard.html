@@ -53,7 +53,7 @@
                             <div class="profile-img">
                                 👤
                             </div>
-                            <h5 class="mb-0">Anne Therese Reyes</h5>
+                            <h5 id="displayName" class="mb-0">Name</h5>
                         </div>
                     </div>
 
@@ -67,6 +67,17 @@
         </div>
 
     </div>
+
+
+    <script>
+        var savedname = localStorage.getItem("studentName");
+        if (savedname) {
+            document.getElementById("displayName").textContent = savedname;
+        } else {
+            document.getElementById("displayName").textContent = "Guest";
+        }
+        
+    </script>
 
 </body>
 </html>
