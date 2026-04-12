@@ -16,6 +16,14 @@
             flex: 1;
             background-color: #f8f9fa;
         }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+        }
     </style>
 </head>
 <body>
@@ -39,9 +47,21 @@
             </nav>
 
             <div class="p-4">
-                <div class="border d-flex justify-content-center align-items-center" style="height: 200px;">
-                    Main Content Goes Here
-                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card p-4 text-center border-0 shadow-sm">
+                            <div class="profile-img">
+                                👤
+                            </div>
+                            <h5 class="mb-0">Anne Therese Reyes</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-4 border-0 shadow-sm">
+                            <P>content here</P>
+                        </div>
+                    </div>
             </div>
 
         </div>
