@@ -18,7 +18,7 @@
             
          <div class="collapse mb-3" id="instructions">
              <div class="card card-body">
-             <p>Please enter your username and password to log in.</p>
+             <p id="megatron">Please enter your username and password to log in.</p>
              </div>
           </div>
 
@@ -38,7 +38,7 @@
         <script>
         function showMessage() {
             var checkbox = document.getElementById("checkboxID");
-            var message = document.getElementById("instructions");
+            var message = document.getElementById("megatron");
 
             if (checkbox.checked) {
                 message.textContent = "The system will remember this device.";
