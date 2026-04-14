@@ -24,8 +24,8 @@
              </div>
           </div>
 
-            <input type ="text" id="user" class="form-control mb-2" placeholder="Username">
-            <input type ="password" class="form-control mb-2" placeholder="Password">
+            <input type="text" id="user" class="form-control mb-2" placeholder="Username">
+            <input type="password" id="password" class="form-control mb-2" placeholder="Password">
             <div class="form-check text-start">
                 <input class="form-check-input" type="checkbox" id="checkboxID" onclick="showMessage()">
                 <label class="form-check-label">Remember me</label>
@@ -41,7 +41,7 @@
         <script>
         function showMessage() {
             var checkbox = document.getElementById("checkboxID");
-            var message = document.getElementById("megatron");
+            var message = document.getElementById("message");
 
             if (checkbox.checked) {
                 message.textContent = "The system will remember this device.";
@@ -53,17 +53,19 @@
         function checkLogin() {
             var usernameinput = document.getElementById("user");
             var username = usernameinput.value;
+            var passwordinput = document.getElementById("password");
+            var password = passwordinput.value;
 
-            if (username.trim() !== "") {
+            if (username.trim() !== "" && password.trim() !== "") {
             localStorage.setItem("studentName", username);
 
             alert("Welcome " + username + ", to our very own website.");
             window.location.href = "dashboard.html";
             } else {
-                alert("Please enter a username.");
+                alert("Please enter both username and password.");
             }
         }
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
