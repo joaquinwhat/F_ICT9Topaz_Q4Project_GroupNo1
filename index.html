@@ -6,39 +6,39 @@
     <title>The Better OBMC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
+<style>
+    
+</style>
+
 <body>
 
     <div class="RedApps">
         <div id="form-box">
 
             <h4 class="title mb-3">Login to Account</h4>
-    
-    </div>
-    
-    
-<button class="btn btn-light w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#instructions">Show Instructions</button>
-            
-         <div class="collapse mb-3" id="instructions">
-             <div class="card card-body">
-             <p id="megatron">Please enter your username and password to log in.</p>
-             </div>
-          </div>
+            <button class="btn btn-light w-100 mb-2" data-bs-toggle="collapse" data-bs-target="#instructions">Show Instructions</button>
 
-            <input type="text" id="user" class="form-control mb-2" placeholder="Username">
-            <input type="password" id="password" class="form-control mb-2" placeholder="Password">
+            <div class="collapse mb-3" id="instructions">
+                <div class="card card-body">
+                    <p>Please enter all of your credentials in the specified fields.</p>
+                </div>
+            </div>
+
+            <input type ="text" id="user" class="form-control mb-2" placeholder="Username">
+            <input type ="password" class="form-control mb-2" placeholder="Password">
             <div class="form-check text-start">
                 <input class="form-check-input" type="checkbox" id="checkboxID" onclick="showMessage()">
                 <label class="form-check-label">Remember me</label>
             </div>
 
-        <div>
             <p id="message"></p>
             <button class="btn btn-info w-100 mt-2" onclick="checkLogin()">Login</button>
-        </div>
+        </div> 
 
     </div>
-    
-        <script>
+
+    <script>
         function showMessage() {
             var checkbox = document.getElementById("checkboxID");
             var message = document.getElementById("message");
@@ -53,19 +53,17 @@
         function checkLogin() {
             var usernameinput = document.getElementById("user");
             var username = usernameinput.value;
-            var passwordinput = document.getElementById("password");
-            var password = passwordinput.value;
 
-            if (username.trim() !== "" && password.trim() !== "") {
+            if (username.trim() !== "") {
             localStorage.setItem("studentName", username);
 
             alert("Welcome " + username + ", to our very own website.");
             window.location.href = "dashboard.html";
             } else {
-                alert("Please enter both username and password.");
+                alert("Please enter a username.");
             }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
