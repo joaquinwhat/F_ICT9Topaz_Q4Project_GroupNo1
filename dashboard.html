@@ -7,11 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .sidebar {
-            width: 80px;
+            width: 100px;
             min-height: 100vh;
             background: #1a237e;
             color: white;
         }
+
+        .sidebar a{
+            font-size: 50px;
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+
         .main-container {
             flex: 1;
             background-color: #f8f9fa;
@@ -31,10 +41,10 @@
     <div class="d-flex">
         
         <div class="sidebar d-flex flex-column align-items-center py-4">
-            <div class="button">🏠</div>
-            <div class="button">📖</div>
-            <div class="button">📁</div>
-            <div class="button">📅</div>
+            <a href="home.html" class="button">🏠</a>
+            <a href="notebooks.html" class="button">📖</a>
+            <a href="files.html" class="button">📁</a>
+            <a href="calendar.html" class="button">📅</a>
         </div>
 
         <div class="main-container">
@@ -80,6 +90,7 @@
             document.getElementById("displayName").textContent = "Guest";
         }
     
+
 
 
 
