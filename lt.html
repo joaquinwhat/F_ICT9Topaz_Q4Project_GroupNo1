@@ -3,63 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math</title>
+    <title>Leadership Training</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
-        .sidebar {
-            width: 120px;
-            min-height: 100vh;
-            background: #1a237e;
-            color: white;
-            flex-shrink: 0;
+
+        body {
+            background-image: url('https://i.pinimg.com/1200x/07/b8/2d/07b82d9d64531d25b9900939119653c1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
-        .sidebar a{
-            font-size: 40px;
-            color: white;
+      .sidebar {
+            width: 100px;
+            height: 100vh;
+            background-color: white;
+            position: fixed;
+            border-right: 1px solid #b7b7b7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 70px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+      .sidebar a {
+            font-size: 32px;
+            color: rgb(82, 186, 234);
+            margin-bottom: 38px;
+            transition: 0.3s;
             text-decoration: none;
-            padding: 15px 0;
-            display: block;
         }
 
-        .main-container {
-            flex: 1;
-            min-width: 0;
+      .sidebar a:hover {
+        transform: scale(1.2);
+        }
+
+      .main-container { 
+            margin-left: 100px; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        .banner {
-            flex: 1;
-            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/067/404/724/small_2x/modern-background-featuring-neon-blue-science-and-math-icons-on-a-dark-gradient-ideal-for-school-education-presentations-posters-or-digital-learning-materials-vector.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        .navbar {
+            background-color: white;
+            padding: 15px 30px;
+            border-bottom: 1px solid #b7b7b7;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+
+        .logo { 
+            height: 50px; 
+            border-radius: 15px;
+        }
+
 
     </style>
 </head>
 <body>
 
     <div class="d-flex">
-
-        <div class="sidebar d-flex flex-column align-items-center py-4">
-            <a href="home.html" class="button">🏠</a>
-            <a href="notebooks.html" class="button">📖</a>
-            <a href="files.html" class="button">📁</a>
-            <a href="calendar.html" class="button">📅</a>
+        <div class="sidebar">
+            <a href="home.html"><i class="bi bi-house-door-fill"></i></a>
+            <a href="notebooks.html"><i class="bi bi-journal-text"></i></a>
+            <a href="files.html"><i class="bi bi-folder-fill"></i></a>
+            <a href="calendar.html"><i class="bi bi-gear-fill"></i></a>
         </div>
 
-            <div class="main-container">
-            
-            <nav class="navbar bg-white border-bottom p-3">
-                <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">OBMC Logo</span>
-                    <a href="user_profile.html" class="text-decoration-none">User Profile</a>
-                </div>
-            </nav>
+        <div class="main-container w-100">
 
-            <div class="banner">
+            <nav class="navbar d-flex justify-content-between align-items-center">
+                <img src="https://i1-e.pinimg.com/1200x/05/d8/2e/05d82e73f78e5411d409a2f5beebaaee.jpg" alt="Logo" class="logo">
+                <a href="user_profile.html" class="btn-profile">User Profile</a>
+            </nav>
                 
             <div class="p-4">
                 <div class="row">
